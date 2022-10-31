@@ -8,6 +8,8 @@ app.get("/", (req, res) => {
   console.log(req.query.campaignId);
   console.log(req.query.workerId);
   res.send(
-    `campaignID is ${req.query.campaignId} and workerID id ${req.query.workerId}`
+    `campaignID is ${req.query.campaignId} and workerID id ${req.query.workerId}
+    <a href="https://www.w3schools.com" target="_blank">click here</a> 
+    `
   );
 });

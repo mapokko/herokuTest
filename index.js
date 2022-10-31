@@ -8,6 +8,6 @@ app.get("/:campaingID/:workerID", (req, res) => {
   console.log(req.params.campaignID);
   console.log(req.params.workerID);
   res.send(
-    `campaignID is ${req.params.campaignID} and workerID id ${req.params.workerID}`
+    `campaignID is ${req.params.campaingID} and workerID id ${req.params.workerID}`
   );
 });

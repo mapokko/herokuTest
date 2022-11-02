@@ -7,13 +7,14 @@ app.get("/", (req, res) => {
   // res.send("hello world");
   console.log(req.query.campaignId);
   console.log(req.query.workerId);
+  console.log(req.query.slotId);
   res.send(
-    `campaignID is ${req.query.campaignId} and workerID id ${req.query.workerId}
-    <a href="/external" target="_blank">click here</a> 
+    `campaignID is ${req.query.campaignId} and workerID id ${req.query.workerId} and slitId is ${req.query.slotId}
+    <a href="/external?slotId=${req.query.slotId}" target="_blank">click here</a> 
     `
   );
 });
 
 app.get("/external", (req, res) => {
-  res.send("external page");
+  res.send(`slot id is ${req.query.slotId}`);
 });

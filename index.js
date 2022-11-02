@@ -52,8 +52,9 @@ app.get("/getPayed", async (req, res1) => {
     .catch((err) => {
       res1.send(`you DID NOT get payed at ${req.query.slotId}`);
       console.log(Object.getOwnPropertyNames(err));
-      console.log(err.request);
-      console.log("------------------------------------------");
-      console.log(err.response);
+      // console.log(err.request);
+      // console.log("------------------------------------------");
+      // console.log(err.response);
+      console.log(err.message);
     });
 });

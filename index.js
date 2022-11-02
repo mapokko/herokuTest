@@ -9,7 +9,11 @@ app.get("/", (req, res) => {
   console.log(req.query.workerId);
   res.send(
     `campaignID is ${req.query.campaignId} and workerID id ${req.query.workerId}
-    <a href="https://www.w3schools.com" target="_blank">click here</a> 
+    <a href="/external" target="_blank">click here</a> 
     `
   );
+});
+
+app.get("/external", (req, res) => {
+  res.send("external page");
 });

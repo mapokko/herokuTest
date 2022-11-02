@@ -1,5 +1,6 @@
 import axios from "axios";
 import express from "express";
+import crypto from "crypto";
 const app = express();
 
 const apiKey =
@@ -39,8 +40,8 @@ app.get("/getPayed", async (req, res1) => {
       {
         answers: [
           {
-            key: "keyName",
-            value: "valueName",
+            key: "paymentcode",
+            value: crypto.randomBytes(16).toString("hex"),
           },
         ],
       },
